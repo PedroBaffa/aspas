@@ -9,7 +9,7 @@ $sucesso = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $conexao->real_escape_string($_POST['nome']);
     $email = $conexao->real_escape_string($_POST['email']);
-    $senha_digitada = $_POST['senha']; // Pegamos a senha limpa
+    $senha_digitada = $_POST['senha'];
 
     // 1. Verifica se o e-mail já está cadastrado
     $sql_verifica = "SELECT id FROM usuarios WHERE email = '$email'";
